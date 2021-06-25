@@ -5,7 +5,7 @@ services:
 # build and run tests
 before_install:
   # name the build with any name
-  - docker build -t zwilderrr/react-test -f ./client/Docker.dev
+  - docker build -t zwilderrr/react-test -f ./client/Dockerfile.dev
   # note - other builds could go here to be executed in `script`
 
 script:
@@ -17,7 +17,7 @@ after_success:
   - docker build -t zwilderrr/multi-nginx ./nginx
   - docker build -t zwilderrr/multi-server ./server
   - docker build -t zwilderrr/multi-worker ./worker
-  # log in to docker cli with env variables set on traviss
+  # log in to docker cli with env variables set on travis
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # push images to docker hub
   - docker push zwilderrr/multi-client
