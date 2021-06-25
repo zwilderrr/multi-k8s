@@ -5,7 +5,7 @@ services:
 # build and run tests
 before_install:
   # name the build with any name
-  - docker build -t zwilderrr/react-test -f ./client/Dockerfile.dev
+  # - docker build -t zwilderrr/react-test -f ./client/Dockerfile.dev
   # note - other builds could go here to be executed in `script`
 
 script:
