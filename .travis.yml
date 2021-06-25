@@ -17,7 +17,7 @@ after_success:
   - docker build -t zwilderrr/multi-nginx ./nginx
   - docker build -t zwilderrr/multi-server ./server
   - docker build -t zwilderrr/multi-worker ./worker
-  # log in to docker cli with env variables set on travis
+  # log in to docker cli with env variables set on traviss
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # push images to docker hub
   - docker push zwilderrr/multi-client
