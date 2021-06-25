@@ -9,7 +9,7 @@ before_install:
   # note - other builds could go here to be executed in `script`
 
 script:
-  - docker run -e CI=true zwilderrr/react-test npm test
+  # - docker run -e CI=true zwilderrr/react-test npm test
 
 # after a non-zero exit code, build all the images
 after_success:
